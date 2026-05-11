@@ -13,7 +13,7 @@ class Logo extends StatelessWidget {
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(
-                      color: ColorsApp.backgroundcolor2,
+                      color: ColorsApp.bgSoftPeach,
                       blurRadius: 18,
                       spreadRadius: 2,
                     ),

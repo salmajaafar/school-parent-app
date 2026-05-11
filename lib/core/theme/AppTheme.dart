@@ -8,6 +8,6 @@ class AppTheme {
     //textTheme: GoogleFonts.interTextTheme(), 
 
     //fontFamily: 'KiwiMaru', 
-    scaffoldBackgroundColor: ColorsApp.Color1,
+    scaffoldBackgroundColor: ColorsApp.creamBase,
   );
 }

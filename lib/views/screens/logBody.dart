@@ -35,7 +35,7 @@ class LoginBody extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14.sp,
-                    color: ColorsApp.backgroundcolor2,
+                    color: ColorsApp.bgSoftPeach,
                   ),
                 ),
                 SizedBox(height: 8.h),
@@ -52,7 +52,7 @@ class LoginBody extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14.sp,
-                    color: ColorsApp.backgroundcolor2,
+                    color: ColorsApp.bgSoftPeach,
                   ),
                 ),
                 SizedBox(height: 8.h),

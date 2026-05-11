@@ -11,7 +11,7 @@ class ErrorBottomSheet {
         width: 400,
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: ColorsApp.backgroundcolor1, 
+          color: ColorsApp.bgPureWhite, 
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -40,7 +40,7 @@ class ErrorBottomSheet {
               child: Text("Close"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.red,
-                foregroundColor: ColorsApp.backgroundcolor1,
+                foregroundColor: ColorsApp.bgPureWhite, 
               ),
             ),
           ],

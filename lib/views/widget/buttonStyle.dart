@@ -56,7 +56,7 @@ class CustomButton extends StatelessWidget {
             Icon(
               icon,
               size: 16.sp,
-              color: textColor ?? ColorsApp.backgroundcolor1,
+              color: textColor ?? ColorsApp.bgPureWhite,
             ),
             SizedBox(width: 5.w),
 
@@ -65,7 +65,7 @@ class CustomButton extends StatelessWidget {
               textButton,
               style: TextStyle(
                 fontSize: 16.sp,
-                color: textColor ?? ColorsApp.backgroundcolor1,
+                color: textColor ?? ColorsApp.bgPureWhite,
               ),
             ),
 

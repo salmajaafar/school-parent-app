@@ -44,11 +44,11 @@ class CustomTextField extends StatelessWidget {
          
 border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(50),
-          borderSide: BorderSide(color: ColorsApp.backgroundcolor2),
+          borderSide: BorderSide(color: ColorsApp.bgPureWhite),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(50),
-          borderSide: BorderSide(color: ColorsApp.backgroundcolor2),
+          borderSide: BorderSide(color: ColorsApp.bgPureWhite),
         ),
         focusedBorder: OutlineInputBorder(
   borderRadius: BorderRadius.circular(50),

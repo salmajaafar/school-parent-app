@@ -14,13 +14,13 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorsApp.Color1,
+      backgroundColor: ColorsApp.creamBase,
       body: Center(
         child: Container(
           width: 0.9.sw,
           height: 0.88.sh,
           decoration: BoxDecoration(
-            color: ColorsApp.Color1,
+            color: ColorsApp.creamBase,
             borderRadius: BorderRadius.circular(30),
           ),
           child: Stack(
@@ -52,7 +52,7 @@ class Welcome extends StatelessWidget {
                   children: const [
                     CircleAvatar(
                         radius: 45,
-                        backgroundColor: ColorsApp.backgroundcolor2,
+                        backgroundColor: ColorsApp.bgPureWhite,
                         child: Logo()),
                   ],
                 ),
@@ -109,7 +109,7 @@ class Welcome extends StatelessWidget {
                       CustomButton(
                         textButton: "log in",
                         icon: Icons.login,
-                        backgroundColor: ColorsApp.backgroundcolor1,
+                        backgroundColor: ColorsApp.bgSoftPeach,
                         borderColor: ColorsApp.PraimaryMain,
                         textColor: ColorsApp.PraimaryMain,
                         onPressed: () {
