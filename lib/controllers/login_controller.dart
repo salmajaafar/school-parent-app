@@ -57,6 +57,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:parent_app/views/screens/confirmation_lottie.dart';
+import 'package:parent_app/views/screens/forgot_password_screen.dart';
 import 'package:parent_app/views/screens/verification.dart';
 import 'package:parent_app/views/widget/error_bottomsheet.dart';
 
@@ -99,9 +100,9 @@ class AuthController extends GetxController {
   }
 
   void forgotPassword() {
-    ErrorBottomSheet.showErrorBottomSheet(
-      title: "Forgot Password",
-      message: "Redirecting to password reset screen...",
+    Get.to(
+      () => const ForgotPasswordScreen(),
+      arguments: email.text.trim(),
     );
   }
 

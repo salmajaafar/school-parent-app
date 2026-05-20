@@ -98,6 +98,7 @@ class Welcome extends StatelessWidget {
                      
                       CustomButton(
                         textButton: "Sign Up",
+                        textColor: ColorsApp.bgPureWhite,
                         icon: Icons.person_add,
                         onPressed: () {
                            Get.to(() => SignupView());

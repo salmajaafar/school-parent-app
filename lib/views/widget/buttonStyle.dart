@@ -51,16 +51,14 @@ class CustomButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            /// icon left
-
-            Icon(
-              icon,
-              size: 16.sp,
-              color: textColor ?? ColorsApp.bgPureWhite,
-            ),
-            SizedBox(width: 5.w),
-
-            /// text
+            if (icon != null) ...[
+              Icon(
+                icon,
+                size: 16.sp,
+                color: textColor ?? ColorsApp.bgPureWhite,
+              ),
+              SizedBox(width: 5.w),
+            ],
             Text(
               textButton,
               style: TextStyle(

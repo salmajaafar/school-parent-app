@@ -1,6 +1,6 @@
 
 import 'package:get/get.dart';
-
+import 'package:parent_app/routes/routes.dart';
 
 class VerifyController extends GetxController {
   var isLoading = false.obs;
@@ -14,7 +14,7 @@ class VerifyController extends GetxController {
     // if (response != null && response.success) {
     //   verificationMessage.value = response.message;
     //   //Get.off(() => ChangePasssowrd(email: email));
-
+     Get.offAllNamed(AppRoutes.main);
     // } else {
     //   verificationMessage.value = 'Failed to verify code';
     //   Get.snackbar('Error', verificationMessage.value);

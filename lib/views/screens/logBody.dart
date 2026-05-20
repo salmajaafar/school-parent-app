@@ -71,6 +71,7 @@ class LoginBody extends StatelessWidget {
                     ? const Center(child: CircularProgressIndicator())
                     : CustomButton(
                         textButton: 'Log In',
+                        textColor: ColorsApp.bgPureWhite,
                         onPressed: () => authController.login(),
                         width: double.infinity,
                       )),

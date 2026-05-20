@@ -1,9 +1,12 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:parent_app/views/screens/confirmation_lottie.dart';
 import 'package:parent_app/views/screens/logIn.dart';
 import 'package:parent_app/views/widget/error_bottomsheet.dart';
 
-
+import 'package:parent_app/routes/routes.dart';
 class SignUpController extends GetxController {
   final fullNameController = TextEditingController();
   final emailController = TextEditingController();
@@ -41,7 +44,7 @@ class SignUpController extends GetxController {
     isLoading.value = true;
 
   
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () async {
       isLoading.value = false;
 
       Get.snackbar(
@@ -52,7 +55,13 @@ class SignUpController extends GetxController {
       );
 
       
-      Get.to(() => LoginScreen());
+      Get.to(() => const ConfirmationLottie());
+
+    
+    await Future.delayed(const Duration(seconds: 3));
+    
+    
+    Get.offAllNamed(AppRoutes.main);
     });
   }
 

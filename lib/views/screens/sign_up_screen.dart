@@ -127,6 +127,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:parent_app/controllers/sign_up_controller.dart';
 import 'package:parent_app/core/colorsApp.dart';
 import 'package:parent_app/views/screens/logIn.dart';
@@ -141,7 +142,7 @@ class SignupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: ColorsApp.backgroundcolor2,
+      backgroundColor: ColorsApp.creamBase,
       body: Stack(
         children: [
           Positioned(
@@ -168,17 +169,17 @@ class SignupView extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const Column(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   Text(
                     "Create\nAccount",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 38,
                       fontWeight: FontWeight.bold,
-                      color:Color(0xffCBB89C), 
+                      color: ColorsApp.dustyRose, 
                       // Colors.white,
                       height: 1.1,
                     ),
@@ -253,6 +254,7 @@ class SignupView extends StatelessWidget {
                                 height: 58,
                                  child:CustomButton(onPressed: controller.createAccount,
                                  textButton:"Create Account", 
+                                 textColor: ColorsApp.bgPureWhite,
                                  )
                                
                                 ),
@@ -262,7 +264,9 @@ class SignupView extends StatelessWidget {
 
                
                         TextButton(
-                          onPressed: () => Get.to(() => LoginScreen()),
+                        onPressed: () {
+                          Get.to(() =>  LoginScreen());
+                        },
                           child: Text.rich(
                             TextSpan(
                               text: "Already have an account? ",

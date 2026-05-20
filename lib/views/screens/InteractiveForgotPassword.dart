@@ -1,11 +1,9 @@
-
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:parent_app/controllers/login_controller.dart';
 import 'package:parent_app/core/colorsApp.dart';
-
+import 'package:parent_app/views/screens/forgot_password_screen.dart';
 
 class InteractiveForgotPassword extends StatefulWidget {
   const InteractiveForgotPassword({super.key});
@@ -17,6 +15,17 @@ class InteractiveForgotPassword extends StatefulWidget {
 class _InteractiveForgotPasswordState extends State<InteractiveForgotPassword> {
   bool _isHovering = false;
 
+  void _openForgotPassword() {
+    String initialEmail = '';
+    if (Get.isRegistered<AuthController>()) {
+      initialEmail = Get.find<AuthController>().email.text.trim();
+    }
+    Get.to(
+      () => const ForgotPasswordScreen(),
+      arguments: initialEmail,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -25,7 +34,7 @@ class _InteractiveForgotPasswordState extends State<InteractiveForgotPassword> {
         onEnter: (_) => setState(() => _isHovering = true),
         onExit: (_) => setState(() => _isHovering = false),
         child: GestureDetector(
-          //onTap: () => Get.to(() => CheckEmail()),
+          onTap: _openForgotPassword,
           child: Text(
             'Forgot Password?',
             style: TextStyle(
@@ -34,7 +43,6 @@ class _InteractiveForgotPasswordState extends State<InteractiveForgotPassword> {
               fontWeight: FontWeight.w500,
               decoration: _isHovering ? TextDecoration.underline : TextDecoration.none,
               decorationColor: ColorsApp.PraimaryMain,
-              //decorationThickness: 1.1,
             ),
           ),
         ),
